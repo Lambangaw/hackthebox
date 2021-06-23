@@ -31,5 +31,7 @@ INFO: Querying computer: Pathfinder.MEGACORP.LOCAL
 INFO: Done in 00M 48S
 ```
 
+Setelah mendapat kan 4 file json sekarang kita akan menjalankan server neo4j `sudo neo4j console` kemudian menjalankan bloodhund untuk mendapatkan graphicalnya
+
 
 

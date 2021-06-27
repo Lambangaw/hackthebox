@@ -1,0 +1,43 @@
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.10.239/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2021/06/25 21:02:26 Starting gobuster in directory enumeration mode
+===============================================================
+/images               (Status: 301) [Size: 338] [--> http://10.10.10.239/images/]
+/Images               (Status: 301) [Size: 338] [--> http://10.10.10.239/Images/]
+/admin                (Status: 301) [Size: 337] [--> http://10.10.10.239/admin/] 
+/plugins              (Status: 301) [Size: 339] [--> http://10.10.10.239/plugins/]
+/includes             (Status: 301) [Size: 340] [--> http://10.10.10.239/includes/]
+/examples             (Status: 503) [Size: 402]                                    
+/dist                 (Status: 301) [Size: 336] [--> http://10.10.10.239/dist/]    
+/licenses             (Status: 403) [Size: 421]                                    
+/IMAGES               (Status: 301) [Size: 338] [--> http://10.10.10.239/IMAGES/]  
+/%20                  (Status: 403) [Size: 302]                                    
+/Admin                (Status: 301) [Size: 337] [--> http://10.10.10.239/Admin/]   
+/*checkout*           (Status: 403) [Size: 302]                                    
+/Plugins              (Status: 301) [Size: 339] [--> http://10.10.10.239/Plugins/] 
+/phpmyadmin           (Status: 403) [Size: 302]                                    
+/webalizer            (Status: 403) [Size: 302]                                    
+/*docroot*            (Status: 403) [Size: 302]                                    
+/*                    (Status: 403) [Size: 302]                                    
+/con                  (Status: 403) [Size: 302]                                    
+/http%3A              (Status: 403) [Size: 302]                                    
+/Includes             (Status: 301) [Size: 340] [--> http://10.10.10.239/Includes/]
+/**http%3a            (Status: 403) [Size: 302]                                    
+/aux                  (Status: 403) [Size: 302]                                    
+/*http%3A             (Status: 403) [Size: 302]                                    
+/Dist                 (Status: 301) [Size: 336] [--> http://10.10.10.239/Dist/]    
+/**http%3A            (Status: 403) [Size: 302]                                    
+/%C0                  (Status: 403) [Size: 302]                                    
+===============================================================
+2021/06/25 21:42:11 Finished
+===============================================================

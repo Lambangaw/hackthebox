@@ -1,0 +1,108 @@
+# Nmap 7.91 scan initiated Fri Jun 25 21:01:45 2021 as: nmap -A -T4 -p- -oN nmap 10.10.10.239
+Warning: 10.10.10.239 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.10.10.239 (10.10.10.239)
+Host is up (0.23s latency).
+Not shown: 65513 closed ports
+PORT      STATE    SERVICE      VERSION
+80/tcp    open     http         Apache httpd 2.4.46 ((Win64) OpenSSL/1.1.1j PHP/7.3.27)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.3.27
+|_http-title: Voting System using PHP
+135/tcp   open     msrpc        Microsoft Windows RPC
+139/tcp   open     netbios-ssn  Microsoft Windows netbios-ssn
+443/tcp   open     ssl/http     Apache httpd 2.4.46 (OpenSSL/1.1.1j PHP/7.3.27)
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.3.27
+|_http-title: 403 Forbidden
+| ssl-cert: Subject: commonName=staging.love.htb/organizationName=ValentineCorp/stateOrProvinceName=m/countryName=in
+| Not valid before: 2021-01-18T14:00:16
+|_Not valid after:  2022-01-18T14:00:16
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+445/tcp   open     microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+3306/tcp  open     mysql?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, GetRequest, HTTPOptions, Kerberos, LANDesk-RC, NCP, NULL, NotesRPC, RTSPRequest, SMBProgNeg, SSLSessionReq, WMSRequest, X11Probe, ms-sql-s, oracle-tns: 
+|_    Host '10.10.16.22' is not allowed to connect to this MariaDB server
+5000/tcp  open     http         Apache httpd 2.4.46 (OpenSSL/1.1.1j PHP/7.3.27)
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.3.27
+|_http-title: 403 Forbidden
+5040/tcp  open     unknown
+5985/tcp  open     http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+5986/tcp  open     ssl/http     Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+| ssl-cert: Subject: commonName=LOVE
+| Subject Alternative Name: DNS:LOVE, DNS:Love
+| Not valid before: 2021-04-11T14:39:19
+|_Not valid after:  2024-04-10T14:39:19
+|_ssl-date: 2021-06-26T01:58:46+00:00; +33m56s from scanner time.
+| tls-alpn: 
+|_  http/1.1
+7680/tcp  open     pando-pub?
+13285/tcp filtered unknown
+45180/tcp filtered unknown
+47001/tcp open     http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open     msrpc        Microsoft Windows RPC
+49665/tcp open     msrpc        Microsoft Windows RPC
+49666/tcp open     msrpc        Microsoft Windows RPC
+49667/tcp open     msrpc        Microsoft Windows RPC
+49668/tcp open     msrpc        Microsoft Windows RPC
+49669/tcp open     msrpc        Microsoft Windows RPC
+49670/tcp open     msrpc        Microsoft Windows RPC
+62416/tcp filtered unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.91%I=7%D=6/25%Time=60D6812C%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.22'\x20is\x20not\x20allow
+SF:ed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(GetRequest,4
+SF:A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.22'\x20is\x20not\x20allowed\x
+SF:20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(HTTPOptions,4A,"
+SF:F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.22'\x20is\x20not\x20allowed\x20t
+SF:o\x20connect\x20to\x20this\x20MariaDB\x20server")%r(RTSPRequest,4A,"F\0
+SF:\0\x01\xffj\x04Host\x20'10\.10\.16\.22'\x20is\x20not\x20allowed\x20to\x
+SF:20connect\x20to\x20this\x20MariaDB\x20server")%r(DNSVersionBindReqTCP,4
+SF:A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.22'\x20is\x20not\x20allowed\x
+SF:20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SSLSessionReq,4A
+SF:,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.22'\x20is\x20not\x20allowed\x2
+SF:0to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Kerberos,4A,"F\0\
+SF:0\x01\xffj\x04Host\x20'10\.10\.16\.22'\x20is\x20not\x20allowed\x20to\x2
+SF:0connect\x20to\x20this\x20MariaDB\x20server")%r(SMBProgNeg,4A,"F\0\0\x0
+SF:1\xffj\x04Host\x20'10\.10\.16\.22'\x20is\x20not\x20allowed\x20to\x20con
+SF:nect\x20to\x20this\x20MariaDB\x20server")%r(X11Probe,4A,"F\0\0\x01\xffj
+SF:\x04Host\x20'10\.10\.16\.22'\x20is\x20not\x20allowed\x20to\x20connect\x
+SF:20to\x20this\x20MariaDB\x20server")%r(LANDesk-RC,4A,"F\0\0\x01\xffj\x04
+SF:Host\x20'10\.10\.16\.22'\x20is\x20not\x20allowed\x20to\x20connect\x20to
+SF:\x20this\x20MariaDB\x20server")%r(NCP,4A,"F\0\0\x01\xffj\x04Host\x20'10
+SF:\.10\.16\.22'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x2
+SF:0MariaDB\x20server")%r(NotesRPC,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.
+SF:16\.22'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20Maria
+SF:DB\x20server")%r(WMSRequest,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.
+SF:22'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x
+SF:20server")%r(oracle-tns,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.22'\
+SF:x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20se
+SF:rver")%r(ms-sql-s,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.22'\x20is\
+SF:x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
+Service Info: Hosts: www.example.com, LOVE, www.love.htb; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 33m55s, deviation: 0s, median: 33m55s
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-06-26T01:58:30
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jun 25 21:24:51 2021 -- 1 IP address (1 host up) scanned in 1386.27 seconds
